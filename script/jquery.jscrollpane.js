@@ -131,7 +131,10 @@
 					elem.width(paneWidth);
 					
 					pane = $('<div class="jspPane" />').css('padding', originalPadding).append(elem.children());
-					container = $('<div class="jspContainer" />')
+					container = $('<div class="jspContainer">' +
+			                        '<div class="b-jspShadow b-jspShadow_top"></div>' +
+			                        '<div class="b-jspShadow b-jspShadow_bottom"></div>' +
+			                        '</div>')
 						.css({
 							'width': paneWidth + 'px',
 							'height': paneHeight + 'px'
