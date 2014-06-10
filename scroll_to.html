@@ -45,6 +45,22 @@
 		<script type="text/javascript" id="sourcecode">
 			$(function()
 			{
+				$('.js-docs__content_scrolled').each(
+					function(){
+						$(this).bind(
+								'jsp-arrow-change',
+								function(event, isAtTop, isAtBottom, isAtLeft, isAtRight) {
+									$(this).removeClass('b-docs__content_scrolled_top')
+									$(this).removeClass('b-docs__content_scrolled_bottom')
+									if (isAtBottom){
+										$(this).addClass('b-docs__content_scrolled_bottom')
+									};
+									if (isAtTop){
+										$(this).addClass('b-docs__content_scrolled_top')
+									};
+								}).jScrollPane();
+				});
+				
 				var pane = $('.scroll-pane');
 				pane.jScrollPane(
 					{
@@ -119,6 +135,19 @@
 						<input type="submit" id="but-scroll-by" value="Scroll by" />
 					</fieldset>
 				</form>
+			</div>
+			<div class="js-docs__content_scrolled">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in ligula id sem tristique ultrices
+					eget id neque. Duis enim turpis, tempus at accumsan vitae, lobortis id sapien. Pellentesque nec orci
+					mi, in pharetra ligula. Nulla facilisi. Nulla facilisi. Mauris convallis venenatis massa, quis
+					consectetur felis ornare quis. Sed aliquet nunc ac ante molestie ultricies. Nam pulvinar ultricies
+					bibendum. Vivamus diam leo, faucibus et vehicula eu, molestie sit amet dui. Proin nec orci et elit
+					semper ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+					mus. Sed quis urna mi, ac dignissim mauris. Quisque mollis ornare mauris, sed laoreet diam malesuada
+					quis. Proin vel elementum ante. Donec hendrerit arcu ac odio tincidunt posuere. Vestibulum nec risus
+					eu lacus semper viverra.
+				</p>
 			</div>
 			<div class="scroll-pane">
 				<p>
