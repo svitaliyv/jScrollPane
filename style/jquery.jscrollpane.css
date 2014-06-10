@@ -16,6 +16,26 @@
 	position: absolute;
 }
 
+.b-jspShadow {
+  position: absolute;
+  width: 100%;
+  height: 16px;
+}
+.b-jspShadow_top {
+  top: 0;
+  box-shadow: inset 0 20px 10px -20px rgba(0, 0, 0, 0.2);
+}
+.b-docs__content_scrolled_top .b-jspShadow_top {
+  display: none;
+}
+.b-jspShadow_bottom {
+  bottom: 0;
+  box-shadow: inset 0 -20px 10px -20px rgba(0, 0, 0, 0.2);
+}
+.b-docs__content_scrolled_bottom .b-jspShadow_bottom {
+  display: none;
+}
+
 .jspVerticalBar
 {
 	position: absolute;
